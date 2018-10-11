@@ -1,0 +1,24 @@
+@import './config/config';
+
+.member-usage-main{
+    font-size: $card-font-size-x-small;
+    font-weight: $font-thin;
+}
+#usage-balance{
+    font-weight: $font-bold !important;
+}
+.member-details{
+    font-size: $card-font-size-large;
+    font-weight: $font-medium;
+}
+#member-msisdn{
+    font-size: $card-font-size-x-small !important;
+}
+.usage-action{
+    font-size: $card-font-size-small;
+    text-align: center;
+}
+.invite-member{
+    font-size: $card-font-size-small;
+    font-weight: $font-medium;
+}

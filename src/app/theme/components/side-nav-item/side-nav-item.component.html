@@ -1,0 +1,9 @@
+<a mat-button class='nav-list-link' (click)='closeMenu.emit()' [routerLink]='redirectURL'> 
+  <div class='item-container'>
+    <div class='label'> {{label}} </div>
+    <div class='icon-wrapper'>
+      <i id='icon' class='fa fa-1x' [ngClass]='faIcon' ></i>
+    </div>
+  </div>
+</a>
+

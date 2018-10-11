@@ -1,0 +1,50 @@
+@import './config/config';
+
+#page-title{
+  background-color: $layout-bg;
+}
+.back-lable{
+  font-size: $nav-font-size-small;
+  font-weight: 200;
+  vertical-align: 25%;
+  padding-left: 10px;
+}
+label{
+  font-size: $nav-font-size-medium;
+}
+#page-content{
+}
+
+.mat-card{
+  width: 600px;
+}
+.address-form-btn{
+  width: 50%;
+}
+.form-clear-btn{
+  width: 25%;
+}
+.select_id{
+  margin-top: 10px !important;
+}
+.id-type-option{
+  font-weight: bolder !important;
+}
+mat-form-field{
+  margin-top: 2px !important;
+}
+::ng-deep .mat-form-field-wrapper{
+	padding-bottom: 0px !important;
+}
+::ng-deep .mat-error{
+	padding-top: 1.0em !important;
+}
+::ng-deep .mat-select-value{
+	font-weight: bold !important;
+}
+
+@media screen and (max-width: $resS){
+  .address-form-btn, .form-clear-btn{
+    width: 100%;
+  }
+}

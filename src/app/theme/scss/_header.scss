@@ -1,0 +1,51 @@
+@import './config/config';
+
+header{
+  background-color: $primary;
+  // .mat-toolbar{
+  // }
+}
+.header-text{
+  font-size: $title-font-size-large;
+}
+.header-back-text{
+  font-size: $title-font-size-medium;
+  color: white;
+  padding-left: 10px;
+}
+.left-arrow{
+  color: white;
+}
+.header_sub_container{
+  display: table;
+}
+.header_sub_container_text{
+  display:table-header-group;
+}
+.header_sub_container_button{
+  display:table-footer-group;
+}
+@media screen and (max-width: $resS) {
+  header{
+    width: 100%;
+    padding: 10px 20px !important;
+  }
+  .drop-links{
+    display: flex !important;
+  }
+  .nav-links{
+    display: none !important;
+  }
+  .header_sub_container{
+    display: table;
+  }
+  .header_sub_container_text{
+    display:table-footer-group;
+  }
+  .header_sub_container_button{
+    display:table-header-group;
+  }
+  .header-back-hide{
+    display: none;
+  }
+}

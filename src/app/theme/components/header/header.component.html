@@ -1,0 +1,42 @@
+<header>
+    <div class="container-fluid main">
+      <div class="row justify-content-between header-padding">
+        <div class="col-10 col-md-10">
+          <div class="row header_sub_container">
+            <div class="header_sub_container_text">
+                <span class="header-text">
+                  {{header_text}}
+                </span>
+               
+            </div>
+
+            <div *ngIf="back_button" [ngClass]='feedback' class="header_sub_container_button" style="padding-top:10px" >
+
+                <span class="step" *ngFor = "let n of hearder_number;let i=index " [ngClass]="active" >{{n}}</span>
+               
+            </div>
+
+            <div *ngIf="!back_button" [ngClass]='feedback' class="header_sub_container_button">
+              
+              <a (click)='onClick.emit()' >
+                <i class="fa fa-chevron-left left-arrow"></i>
+                <span class="header-back-text">Back</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-2 col-md-2 ">
+          <div class='header-info pull-right'> 
+            <img class='header-logo' src='{{ASSETS_PATH}}/images/logo-square.png'
+              srcset="{{ASSETS_PATH}}/images/logo-square@2x.png 2x,
+              {{ASSETS_PATH}}/images/logo-square@3x.png 3x" />
+          </div>
+        </div>
+      </div>
+    </div>
+</header>
+  
+  
+  
+  

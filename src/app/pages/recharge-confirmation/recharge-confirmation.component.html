@@ -1,0 +1,93 @@
+<div id='page' class='page'>
+  <div class="header-div">
+    <com-header [header_text]="header_text" (click)='backButtonRedirection()' id='header'></com-header>
+  </div>
+  <div class='page-content'>
+    <!-- Main Page  -->
+    <div class="main">
+      <div class="container-fluid nopadding">
+        <div class="row justify-content-between">
+          <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 desktopscreen">
+            <div class="row noMargin">
+              <mat-card class='rechargeCard'>
+                <p class='rechargeCardHeading'>Your recharge:</p>
+                <div class='row noMargin' *ngFor='let item of Individual_Items'>
+                  <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 rechargeIndividualItem noPadding">{{item.Individual_ItemName}}</div>
+                  <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 rechargeIndividualValue noPadding">R {{item.Individual_Value}}</div>
+                </div>
+                <hr>
+                <div class='row noMargin'>
+                  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 rechargeTotalText noPadding">Total</div>
+                  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 noPadding">
+                    <div class="row noMargin">
+                      <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12 noPadding rechargeTotalValue'>R {{Total_Value}}</div>
+                    </div>
+                    <div class="row noMargin">
+                      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 noPadding rechargeVATValue">{{VAT_Value}}</div>
+                    </div>
+                  </div>
+                </div>
+              </mat-card>
+            </div>
+            <br>
+            <div class="row noMargin">
+              <span class='emailText'>Email address</span>
+            </div>
+            <div class="row noMargin">
+              <div class="col-xs-10 col-sm-10 col-md-10 col-lg-8 noPadding">
+                <form [formGroup]='emailForm'>
+                  <com-input formControlName='email' placeholder='Eg. john@example.co.za' value='' type='email' requrired 
+                  [error]="((emailForm.get('email').hasError('required') || emailForm.get('email').hasError('email') ||emailForm.get('email').hasError('pattern')) && !emailForm.get('email').pristine) == false ? '' : 'Please enter valid email address'"></com-input>
+                </form>
+                <form [formGroup]='payForm' id='payform' method='post' [action]='paygateURL'>
+                  <input formControlName='pay' type='hidden' name='reference' value='' id='reference'>
+                </form>
+              </div>
+              <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 noPadding">
+                <ng-template #popContent class='tooltipContent'>
+                  <div class="container px-4 py-2">
+                    <div class="row">
+                      <div class="col-10 nopadding">
+                        <span>Giving us your email address makes payments quicker and more secure</span>
+                      </div>
+                      <div class="col-2 nopadding">
+                        <div class="text-right">
+                            <i class="fa fa-1x fa-times d-none d-md-block" (click)='pd.close()'></i>
+                            <i class="fa fa-1x fa-times d-block d-md-none" (click)='pm.close()'></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+                <button type="button" class="btn btn-outline-secondary mr-2 tooltipButton d-none d-md-block" placement="right-bottom" popover-class="increase-popover-width"  
+                [ngbPopover]="popContent"  #pd="ngbPopover">?</button>
+                <button type="button" class="btn btn-outline-secondary mr-2 tooltipButton d-block d-md-none" placement="left-bottom" popover-class="increase-popover-width"  
+                [ngbPopover]="popContent"  #pm="ngbPopover">?</button>
+              </div>
+              <div class="col-md-2 col-lg-2"></div>
+            </div>
+            <div class="row noMargin">
+              <div class="col-xs-12 col-sm-12 col-md-10 col-lg-8 noPadding">
+                <com-button type='primary' label="Agree to T's and C's" class='buttonAgree' (click)='agreeTnC(emailForm)' [disabled]="!emailForm.valid"></com-button>
+                <!-- <com-button type='primary' *ngIf='!emailForm.valid' label="Agree to T's and C's" class='buttonAgree' [disabled]="true"></com-button> -->
+              </div>
+            </div>
+            <div class="row noMargin">
+              <div class="col-xs-12 col-sm-12 col-md-10 col-lg-8 noPadding">
+                <com-button type='secondary' label="Read T's and C's" class='buttonRead' (click)='openVerticallyCentered()'></com-button>
+              <!-- <button class="btn btn-outline-primary mb-2 mr-2" >Modal vertically centered</button> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-lg-3 mobilescreen"></div>
+          <div class="col-md-4 col-lg-4 noPadding mobilescreen" [hidden]='mobile_screen'>
+            <!-- <span class="sideImage"></span> -->
+              <img class='sideImage' src='{{ASSETS_PATH}}/images/sales-enablement-illustrations-5-3.png'
+              srcset="{{ASSETS_PATH}}/images/sales-enablement-illustrations-5-3@2x.png 2x,
+              {{ASSETS_PATH}}/images/sales-enablement-illustrations-5-3@3x.png 3x" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

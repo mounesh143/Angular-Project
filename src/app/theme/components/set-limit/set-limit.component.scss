@@ -1,0 +1,58 @@
+.limits-main{
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 400px;
+    grid-gap: 10px 0px;
+    padding: 10px;
+    opacity: 0.4;
+  }
+  .row1{
+    display: grid;
+    grid-template-columns: 100px auto;
+    justify-content: left;
+  }
+  .row2{
+    display: grid;
+    grid-template-columns: 150px auto;
+    justify-content :left;
+  }
+  .incdec{
+    width: 80px;  
+    padding: 0 !important;
+    text-align: center;
+    line-height: 30px !important;
+    margin: 0 !important;
+  }
+  .type-dropdown{
+    margin: auto !important;
+  }
+  .limits-text{
+    padding-top: 2px;
+  }
+  .set-limit{
+    display: grid;
+    grid-template-columns: 28px 80px 28px;
+    grid-template-rows: auto;
+  }
+  .incdec-button{
+    height: 32px;
+    cursor: pointer;
+  }
+  .incdec-icon{
+    padding: 7px;
+    color: white;
+  }
+  .form-control{
+    width: 60px;
+    padding: 2px 4px !important;
+  }
+  .indec-disabled{
+    pointer-events: none !important;
+    cursor: default !important;
+  }
+  .minus{
+    border-radius: 2px 0px 0px 2px;
+  }
+  .plus{
+    border-radius: 0px 2px 2px 0px;
+  }

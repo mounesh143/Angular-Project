@@ -1,0 +1,21 @@
+<div class="section">
+    <com-header [header_text]="header_text" (click)=' gotoFeedback()' feedback='header-back-hide'></com-header>
+  <div class="row no-margin">
+      <div class="col-sm-12 col-md-6 col-lg-6 main-padding">
+          <span class="heading">Enjoy your bundle!</span>
+          
+          <div class='row large_screen'>
+              <div class="col-sm-12 col-md-7 col-lg-7 pt-3">                
+              <com-button large_font='true' label='Go back to homepage' type='primary-pad' (click)=' gotoHome()' [disabled]="false"></com-button>
+              </div>  
+              </div>  
+        
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-6 bottom-div">
+          <img class="image" src="{{ASSETS_PATH}}/images/sales-enablement-illustrations-5-26.png" srcset="{{ASSETS_PATH}}/images/sales-enablement-illustrations-5-26@2x.png 2x,
+        {{ASSETS_PATH}}/images/sales-enablement-illustrations-5-26@3x.png 3x">
+        <com-button large_font='true'class='small_screen_1' label='Submit again' type='primary-pad'  (click)=' gotoHome()' [disabled]="false"></com-button>
+      </div>
+  </div>
+</div>
+

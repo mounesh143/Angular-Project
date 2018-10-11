@@ -1,0 +1,17 @@
+@import './config/config';
+
+.sidenav-container {
+  display: grid;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.mat-sidenav {
+  width: 300px;
+  background-color: $primary;
+}
+.mat-list-item{
+  border-bottom: 1px solid $sidenav-border !important;
+}

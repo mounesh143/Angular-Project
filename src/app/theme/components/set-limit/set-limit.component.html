@@ -1,0 +1,49 @@
+<div class="limits-main"
+[ngStyle]="{'opacity':(limitStatus ? '1' : '0.5')}">
+    <div class="row1">
+      <div class="limits-text">
+        <span>{{ bundleType }} limit</span>
+      </div>
+      <div class="limits-toggle">
+          <mat-slide-toggle labelPosition="before" [checked]="toggleStatus"
+           (change)="toggleStatusChange()" [disabled]='!limitStatus'>
+            Limits 
+            <span class="status-text">{{status}}</span>
+          </mat-slide-toggle>
+      </div>
+    </div>
+    <div class="row2">
+      <div class="set-limit">
+          <div (click)="decrease()" class="incdec-button minus" 
+          [ngClass]="[toggleStatus === false? 'indec-disabled' : '']"
+          [ngStyle]="{'background-color':limitStatus ? '#DDDDDD' : '#FFCB05',
+          'pointer-events': limitStatus ? '' : 'none',
+          'cursor': limitStatus ? '' : 'default'}">
+            <i class="fa fa-minus incdec-icon"></i>
+        </div>
+        <div *ngIf="toggleStatus">
+            <input class="incdec" type="number" name="incdec" value="{{incdec_value}}" autocomplete="off" 
+            [disabled]="input_disabled" (keyup)="updateInputValue($event.target.value)" min="1" max="9999">
+        </div>
+        <div *ngIf="!toggleStatus">
+            <input class="incdec" type="text" name="incdec" value="{{disabled_string}}" 
+            autocomplete="off" [disabled]="true">
+        </div>
+            <div (click)="increase()"  class="incdec-button plus"
+             [ngClass]="[toggleStatus === false  ? 'indec-disabled' : '']"
+             [ngStyle]="{'background-color':limitStatus ? '#DDDDDD' : '#FFCB05',
+             'pointer-events': limitStatus ? '' : 'none',
+             'cursor': limitStatus ? '' : 'default'}">
+              <i class="fa fa-plus incdec-icon"></i>
+        </div>
+      </div>
+        <div class="dropdown-main">
+            <div class="md-form">
+                <select class="form-control"  required [(value)]="selectedValue" 
+                [disabled]='!toggleStatus || !limitStatus'>
+                 <option *ngFor="let type of bundleUnits" [value]=type >{{type}}</option>
+                </select>
+              </div>
+        </div>
+    </div>
+  </div>

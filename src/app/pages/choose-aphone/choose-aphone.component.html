@@ -1,0 +1,111 @@
+
+
+                <div class="header-div">
+                                <com-header [header_text]="header_text" [hearder_number]="numbers" [back_button]="back_button"  ></com-header>
+                                            
+                            </div> 
+                            <div class="title-text">
+                            <span style="font-weight:200">Your total so far: </span>  <span style="font-weight:600; font-size: 25px"> {{sub_HeaderText}}</span>
+                </div>
+
+
+
+
+
+
+<div class="container">
+        <div class="page-content">
+
+                
+                <div class="row">
+                                <div class="col-sm-12">
+                                        <div class="tabs">
+                                            <com-tabview tab_names="Add device | SIM Only" style="font-size: 20px;"></com-tabview>
+                   
+                                        </div>
+                                        
+                                  </div>
+                                 
+                </div>
+        <div class="container-fluid " style="margin-top:10px" *ngIf="tab_state === '0'" >
+                <div class="header-text"> 
+                    <h3 style="font-weight:800;margin-top: 20px;margin-bottom: 20px">Let’s start with your brand</h3>
+                </div>
+
+
+                <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3"  *ngFor =" let d of DeviceName;let id = index" (click)="setClickedDevice(id,d.Devicename)"   >
+                                       
+                                <div class="pull-right test"   *ngIf="id == selectedDevice" >
+                                                            <img [src]="icon_image_selected"> 
+                                </div>
+                                <div class="pull-right "  *ngIf="id !== selectedDevice" >
+                                                            <img [src]="icon_image_unselected"> 
+                                </div>
+                                                    
+                             <div class="card_test">
+                                                   
+                                <div >
+                                                           
+                                 <img [src]='d.imageurl' alt="DeviceImges" >
+                                 </div>
+                                <div class="card_body">
+                                                          
+                                   <span >{{d.Devicename}}</span> 
+                                                        
+                                 </div>
+                                
+                                </div>
+                                                        
+                        </div>
+                  
+                </div>
+          </div>
+          
+          <div class="container-fluid " style="margin-top:10px" *ngIf="tab_state === '1'" >
+                        <div class="header-text"> <h3 style="font-weight:800;margin-top: 20px;margin-bottom: 20px;margin-left: -15px;"></h3></div>
+                       
+                        <div  class="col-12 col-sm-6 col-lg-3 white-background shadow rounded p-0">
+                                        <div  class="row pt-3 pb-3">
+                                                <div  class="col-5 pr-0">
+                                                   <img  class="img-fluid p-3" [src]="sim_Image">
+                                                </div>
+                                                <div  class="col-7">
+                                                        <span >Don't need a device?</span>
+                                                        <h4  class="remove-bold">Build your Made for Me contract with a free SIM.</h4>
+                                                        <com-button label="Select" style="margin: 13px -7px !important;"  ></com-button>
+                                                </div>
+                                        </div>
+                                </div>
+                                
+
+          </div>
+        <div *ngIf="id == selectedDevice && tab_state === '0'" >
+
+                        <div class="row col pt-4 pl-3"  >
+                                        <span>
+                                                Hmmm, we don’t have any of these in the warehouse.
+                                         
+                                        </span>
+                                </div>
+                                <div class="row col pt-4 pl-3">
+                                        <h6 >
+                                        Don't see what you're looking for? <a (click)='helpIcon()'routerLink='/recharge/help'>Tell us</a> and well let you know when we've got it. 
+                                         here
+                                        </h6>
+                                 </div>
+        </div>
+          
+ 
+                 <div class="container-fluid"  *ngIf="id !== selectedDevice && tab_state === '0'">
+                
+                              
+                        <com-products [brandName]="brandName"></com-products>
+                
+                </div>
+                <div class="emptydiv">
+
+                </div>
+
+        </div>        
+</div>

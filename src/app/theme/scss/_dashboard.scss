@@ -1,0 +1,78 @@
+@import './config/config';
+#profile, #drop-down-view{
+  background-color: $layout-bg;
+}
+.balance-pad{
+  background-color: $primary !important;
+  padding: 30px;  
+  border-radius: 3px;
+}
+.profile-name{
+  font-size: $layout-font-size-large;
+  font-weight: bold;
+}
+.profile-element {
+  font-size: $info-font-size-small;
+  font-weight: 200;
+}
+.profile-value {
+  font-size: $info-font-size-small;
+  font-weight: 400;
+}
+
+#drop-down-view{
+  display: none;
+}
+.tile{
+  :hover {
+    color: $stackoverflow-color;
+  }
+}
+
+.member-list-heading-text{
+  font-size: $card-font-size-x-small;
+  font-weight: $font-medium;
+  color: $input-border-default;
+}
+.add-member-button-group:not(i){
+  font-size: $card-font-size-x-small !important;
+}
+.seats-remaining{
+  font-weight: $font-thin !important;
+}
+@media screen and (max-width: $resS){
+
+  #detailed-view{
+    display: none;
+  }
+  #drop-down-view{
+    display: block;
+  }
+
+  .balance-grid{
+    grid-template-columns: 1fr;
+    width: 100%;
+    grid-gap: 2px;
+  }
+  .balance-pad{
+    padding: 20px 10px;
+  }
+  .tile{
+    display: flex;
+    justify-content: flex-start;
+  }
+  .add-product-grid.mat-card{
+    width: 280px !important;
+  }
+  .profile-name{
+    font-size: $layout-font-size-medium;
+  }
+}
+
+@media screen  and (max-width: $resL){
+  .balance-pad{
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+  }
+}
+

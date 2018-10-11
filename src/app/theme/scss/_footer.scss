@@ -1,0 +1,23 @@
+@import './config/config';
+
+.footer-main{
+    background-color: $footer-bg;
+    color: white;
+    font-weight: $font-thin;
+  }
+  .recharge-text{
+    font-size: 12px;
+  }
+  .terms-text{
+    font-size: 10px;
+  }
+  
+  .terms{
+    line-height: 14px;
+  }
+
+  @media screen and (max-width: $resS){
+    .pl-4{
+      padding-left: 0 !important;
+    }
+  }

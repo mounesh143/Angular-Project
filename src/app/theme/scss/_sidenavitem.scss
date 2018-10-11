@@ -1,0 +1,18 @@
+@import './config/config';
+
+.item-container{
+  background-color: $primary;
+}
+a.nav-list-link.mat-button{
+  // width: 200px;
+}
+
+@media screen and (max-width: $resS){
+  a.nav-list-link.mat-button{
+    width: 100%;
+  }
+}
+
+.label{
+  font-size: $nav-font-size-medium;
+}

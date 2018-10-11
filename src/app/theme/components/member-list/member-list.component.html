@@ -1,0 +1,47 @@
+<div class="grid-container">
+  <div class='member-details'
+   [ngClass]="[memberData.action !== 'Edit' ? 'member-disabled' : '']">
+    <div style="line-height: 25px;">{{ memberData.firstname }}</div>
+    <div>
+        <span>{{ memberData.lastname }}</span> 
+        <span *ngIf="memberData.role !== ''"> ({{memberData.role}})</span>    
+    </div>
+    <div id='member-msisdn'>{{ memberData.msisdn }}</div>
+  </div>
+  <div class='invite-member' *ngIf="memberData.action !== 'Edit'">
+      <span>Waiting for member to accept invite</span>
+  </div>
+  <div class='member-usage-main' *ngIf="memberData.action === 'Edit'">
+      <div *ngFor="let usage of memberData.usage_details"  class='member-usage'>
+    <div> 
+        <div>
+            <com-progressbar class='usage-bar' value='{{ usage.used }}'
+             maxValue='{{ usage.limit }}'></com-progressbar>
+        </div>
+        <div class='usage-made'>
+            <div *ngIf="usage.unlimited === '1'">
+                <span id='usage-balance'>{{ usage.used }} {{usage.unit}}</span>
+                <span> {{ usage.type }} </span>
+            </div>
+            <div *ngIf="usage.unlimited === '0'">
+                <span id='usage-balance'>{{ usage.used }} {{usage.unit}}</span>
+                <span> {{ usage.type }} / </span>
+                <span id='usage-balance'> {{ usage.left }} {{usage.unit}} </span>
+                <span>left</span>
+            </div>
+        </div>
+        <div class='usage-limit'>
+            <span *ngIf="usage.unlimited === '1'">Limit: Unlimited</span>
+            <span *ngIf="usage.unlimited === '0'">Limit: {{ usage.limit }} {{ usage.unit }} </span>
+        </div>
+    </div>
+</div>
+   </div>
+  <div class='usage-action'>      
+      <button mat-fab color="primary" class="action-button">
+          <i class='fa fa-arrow-right fa-lg arrow' *ngIf="memberData.action === 'Edit'" style='color:white'></i>          
+          <i class='fa fa-times fa-lg arrow' *ngIf="memberData.action !== 'Edit'" style='color:white'></i>          
+        </button>
+      <div>{{memberData.action}}</div>
+  </div>
+</div>

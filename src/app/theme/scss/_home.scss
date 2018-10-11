@@ -1,0 +1,86 @@
+@import './config/config';
+
+.wrapper {
+  background-color: $primary;
+}
+
+.title-cls{
+  font-size: $layout-font-size-large;
+  font-weight: 600;
+}
+.mat-card-title{
+  font-size: $card-font-size-small;
+}
+.backLogin{
+	color: white;
+}
+.loginLink{
+	padding-left: 24px;
+}
+.backLoginText{
+	font-size: $nav-font-size-medium !important;
+	padding-left: 10px;
+	vertical-align : 25%;
+}
+.page-content{
+  height: fit-content;
+ // min-height: 60vh;
+ // width: 100vw;
+ // overflow-y: scroll;
+ padding: 60px 4% !important;
+}
+
+
+
+@media screen and (max-width: $resS){
+ .title-cls{
+   font-size: $title-font-size-medium;
+ }
+ #page {
+   overflow-y: scroll;
+   height: 100vh;
+ }
+ .wrapper{
+   width: 100%;
+ }
+  .mat-card {
+    width: 280px !important;
+  }
+  .pt-5, .py-5 {
+    padding-top: 1rem !important;
+  }
+  .page-content{
+    padding: 10px 5% 30px !important;
+  }
+}
+
+@media screen and (max-width: $resMin){
+  .title-cls{
+    font-size: $title-font-size-small;
+  }
+}
+
+@media screen and (max-width: $resM){
+  .bundle-icon{
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (min-width: $resL) and (max-width: $resP){
+  .col-lg-2 {
+    -ms-flex: 0 0 33.33%;
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+  }
+  
+}
+
+@media screen and (max-width: $resP){
+  .bundle-icon{
+    margin-bottom: 15px;
+  }
+  .help-bundle-icon{
+    margin-bottom: 15px;
+  }
+}
+

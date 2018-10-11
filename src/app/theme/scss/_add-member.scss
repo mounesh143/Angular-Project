@@ -1,0 +1,83 @@
+@import './config/config';
+
+#page-title{
+    background-color: $layout-bg;
+    padding: 50px;
+}
+.back-lable{
+    font-size: $nav-font-size-small;
+    font-weight: 200;
+    vertical-align: 25%;
+    padding-left: 10px;
+  }
+  label{
+    font-size: $nav-font-size-medium;
+  }
+  .layout-title {
+    font-weight: 400;
+  }
+  
+  .input-wrapper {
+    width: 400px !important;
+  }
+  com-button > button {
+    width: 300px;
+  }
+  #page-content{
+  }
+  
+  .mat-card{
+    width: 600px;
+  }
+  .highlighted-text {
+    color: $primary;
+  }
+  .inputFields-addMember {
+    font-size: $info-font-size-small;
+    font-weight: 600;
+  }
+  .address-form-btn{
+    width: 50%;
+  }
+  .form-clear-btn{
+    width: 25%;
+  }
+  .select_id{
+    margin-top: 10px !important;
+  }
+  .id-type-option{
+    font-weight: bolder !important;
+  }
+  mat-form-field{
+    margin-top: 2px !important;
+  }
+  ::ng-deep .mat-form-field-wrapper{
+      padding-bottom: 0px !important;
+  }
+  ::ng-deep .mat-error{
+      padding-top: 1.0em !important;
+  }
+  ::ng-deep .mat-select-value{
+      font-weight: bold !important;
+  }
+  .add-member-header-title {
+    font-size: $card-font-size-x-medium;
+  }
+  .add-member-header-content {
+    font-size: $info-font-size-small;
+  }
+  com-button {
+    font-size: 12px;
+  }
+  .add-member-div {
+    width: 430px;
+  }
+  .add-member-button {
+    width: 300px;
+  }
+  @media screen and (max-width: $resS){
+    .address-form-btn, .form-clear-btn{
+      width: 100%;
+    }
+  }
+  

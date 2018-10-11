@@ -1,0 +1,69 @@
+@import './config/config';
+
+.size{
+    font-size: $tile-font-size-x-medium;
+    font-weight: bolder;
+}
+.unit{
+    font-size: $tile-font-size-regular;
+    font-weight: bold;
+}
+.y-desc{
+    font-size: $card-font-size-x-small;
+    font-weight: $font-thin;
+}
+.rate{
+    font-size: $tile-font-size-x-medium;
+    font-weight: bold;
+}
+.special-desc{
+    font-size: $card-font-size-x-small;
+    font-weight: $font-thin;
+    color:$primary;
+}
+.w-desc{
+    font-size: $card-font-size-x-small;
+    font-weight: $font-thin;
+}
+.yellow{
+    background-color: $primary;
+}
+.whatsapp{
+    background-color: $whatsapp-color;
+}
+.twitter{
+    background-color: $twitter-color;
+}
+.facebook{
+    background-color: $facebook-color;
+}
+.youtube{
+    background-color: $youtube-color;
+}
+
+@media screen and (max-width: $resS){
+    .size{
+        font-size: $tile-font-size-regular;
+        font-weight: bolder;
+    }
+    .unit{
+        font-size: $tile-font-size-h-small;
+        font-weight: bolder;
+    }
+    .y-desc{
+        font-size: $card-font-size-xx-small;
+    }
+    .rate{
+        font-size: $tile-font-size-regular;
+        font-weight: bold;
+    }
+    .w-desc{
+        font-size: $card-font-size-xx-small;
+        font-weight: $font-thin;
+        padding-left: 0px;
+        padding-top: 2px !important;
+    }
+    .price-main{
+        padding: 13px 0px 0px 25px;
+    }
+}

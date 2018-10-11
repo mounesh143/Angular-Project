@@ -1,0 +1,42 @@
+a{
+    color: #488fc8;
+    cursor: pointer;
+}
+// .mat-drawer-content{
+//     overflow: hidden;
+//     background-color: #F8F8F8;
+// }
+#page{
+    // overflow-x: hidden;  
+    // overflow-y: scroll;
+    // height: 100vh;  
+    position: relative;
+    min-height: 80vh;
+}
+// .header-div{
+//     // height: auto;
+// }
+.footer-div{
+    position: absolute;
+    width: 100%;
+}
+.page-content{
+    //  height: fit-content;
+    //  min-height: 60vh;
+    // width: 100vw;
+    // overflow-y: scroll;
+    padding: 60px 4% !important;
+}
+.helpBack{
+    padding-left: 1.9rem !important;
+}
+.anchorhelp{
+    color:rgb(0,0,0) !important;
+}
+@media screen and (max-width: 660px){
+    .page-content{
+        padding: 40px 4% !important; 
+    }
+}
+
+

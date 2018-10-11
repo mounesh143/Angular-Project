@@ -1,0 +1,14 @@
+info|2018-08-02T06:33:30.367Z||sendRequest: url - plugin=IBS&subsType=PREPAID&transID=100&MSISDN=2783227009&subsID=S1E2B3F48F40&balType=1
+info|2018-08-02T06:33:30.685Z||sendRequest: Status - 200, response - {"Header":{"REQ_TYPE":"0","SVC_ERR_NR":"404","SVC_RESULT":"True","TRANS_ID":"4455480"},"subattr":{"ACTIVE_DATE":"-","CSP":"-","FTUSER":"-","IBS_SVC_CLASS":"-","MSISDN":"2783227009","OICK":"-","SDP_SVC_CLASS":"-","SUB_STATUS":"-","SUB_TYPE":"-"}}
+info|2018-08-02T06:33:30.685Z||sendRequest: Status - 200, response - "{\"Header\":{\"REQ_TYPE\":\"0\",\"SVC_ERR_NR\":\"404\",\"SVC_RESULT\":\"True\",\"TRANS_ID\":\"4455480\"},\"subattr\":{\"ACTIVE_DATE\":\"-\",\"CSP\":\"-\",\"FTUSER\":\"-\",\"IBS_SVC_CLASS\":\"-\",\"MSISDN\":\"2783227009\",\"OICK\":\"-\",\"SDP_SVC_CLASS\":\"-\",\"SUB_STATUS\":\"-\",\"SUB_TYPE\":\"-\"}}"
+info|2018-08-02T08:08:40.494Z||sendRequest: url - https://soadigstgesf.mtn.co.za:20260/GenerateSOATransactionIdService/GenerateSOATransId/getSOATransactionID
+info|2018-08-02T08:13:58.611Z||sendRequest: url - https://soadigstgesf.mtn.co.za:20260/GenerateSOATransactionIdService/GenerateSOATransId/getSOATransactionID
+info|2018-08-02T08:17:21.648Z||sendRequest: url - https://soadigstgesf.mtn.co.za:20260/GenerateSOATransactionIdService/GenerateSOATransId/getSOATransactionID
+info|2018-08-02T08:19:05.102Z||sendRequest: url - https://soadigstgesf.mtn.co.za:20260/GenerateSOATransactionIdService/GenerateSOATransId/getSOATransactionID
+info|2018-08-02T08:20:02.761Z||sendRequest: url - https://soadigstgesf.mtn.co.za:20260/GenerateSOATransactionIdService/GenerateSOATransId/getSOATransactionID
+info|2018-08-02T08:22:28.161Z||sendRequest: url - https://soadigstgesf.mtn.co.za:20260/GenerateSOATransactionIdService/GenerateSOATransId/getSOATransactionID
+info|2018-08-02T08:23:11.689Z||sendRequest: url - https://soadigstgesf.mtn.co.za:20260/GenerateSOATransactionIdService/GenerateSOATransId/getSOATransactionID
+info|2018-08-02T08:23:46.333Z||sendRequest: url - https://soadigstgesf.mtn.co.za:20260/GenerateSOATransactionIdService/GenerateSOATransId/getSOATransactionID
+info|2018-08-02T08:23:48.765Z||sendRequest: url - https://soadigstgesf.mtn.co.za:20260/GenerateSOATransactionIdService/GenerateSOATransId/getSOATransactionID
+info|2018-08-02T08:24:13.110Z||sendRequest: url - https://soadigstgesf.mtn.co.za:20260/GenerateSOATransactionIdService/GenerateSOATransId/getSOATransactionID
+info|2018-08-02T08:24:38.371Z||sendRequest: url - https://soadigstgesf.mtn.co.za:20260/GenerateSOATransactionIdService/GenerateSOATransId/getSOATransactionID

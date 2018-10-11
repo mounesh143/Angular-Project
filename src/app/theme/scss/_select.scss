@@ -1,0 +1,60 @@
+@import './config/config';
+
+.select-width{
+  width: 100%;
+  line-height: 20px;
+  border-radius: 4px;
+}
+.mat-select-content {
+  color: $default-text;
+  border: 1px solid $input-border-default;
+}
+.mat-input-underline.mat-form-field-underline{
+  display:none;
+}
+.mat-input-infix.mat-form-field-infix{
+  width:inherit;
+  padding: 10px 15px;
+  border-radius: 2px;
+  margin-bottom: 10px !important;
+  border: 1px solid $input-border-default;
+}
+.mat-select-arrow{
+  width: 10px !important;
+  height: 10px !important;
+  transform: rotate(45deg);
+  border-right: 2px solid $default-text !important;
+  border-bottom: 2px solid $default-text !important;
+  border-left: 0px !important;
+  border-top: 0px !important;
+  margin: -8px 5px !important;
+}
+.mat-input-container.mat-form-field{
+  border-radius: 4px !important;
+  line-height: 20px !important;
+}
+.mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+  color: $default-text;
+}
+.mat-input-subscript-wrapper.mat-form-field-subscript-wrapper{
+  margin-top:-10px;
+}
+.mat-select-trigger .mat-select-value{
+  font-size: $card-font-size-x-small;
+  font-weight: $font-medium;
+}
+.mat-select-panel .mat-option{
+  font-size: $card-font-size-x-small !important;
+  font-weight: $font-thin !important;
+}
+::ng-deep .mat-form-field-wrapper{
+	padding-bottom: 0px !important;
+}
+::ng-deep .mat-error{
+	padding-top: 1.0em !important;
+}
+::ng-deep .mat-select-value{
+	font-weight: bold !important;
+}
+
+

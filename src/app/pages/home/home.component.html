@@ -1,0 +1,74 @@
+<div id='page'>
+  <div class="header-div">
+    <com-header [header_text]="header_text" [back_button]="back_button"  (click)='backEmitter()' (openSidenav)="openSidenav()" id='header'></com-header>
+  </div>
+  <div [ngStyle]="{'margin-top': [ true ] ? '0px' : '0px'}" class='page-content'>
+    <div class="main">
+      <div *ngIf="help_icon === false" class="container-fluid nopadding">
+        <div class="row justify-content-between">
+          <div class="col-6 col-lg-2" *ngFor="let bn of bundleArray.results;let idx = index" [hidden]='hide_icons && mobile_screen'>
+            <div class="bundle-icon">
+              <com-bundle-icon [icon]=bn.icon [color]=bn.color [name]=bn.name [disabled]=bn.disable [(clicked)]=bn.click (click)='toggleIcon(idx,bn.disable)'></com-bundle-icon>
+            </div>
+          </div>
+        </div>
+        <div class="row col pt-4 pl-3" *ngIf="lastClick === -1">
+          <span>
+            Not sure what's what? Click
+            <a (click)='helpIcon()'routerLink='/recharge/help'> here</a>
+          </span>
+        </div>
+        <div class="row pt-5" [hidden]="!(lastClick === 0)" #datamob>
+          <div class="col pull-right">
+            <com-data-bundles [mobile]="hide_icons && mobile_screen" [bundleList]="bundlelist_details"></com-data-bundles>
+          </div>
+        </div>
+        <div class="row  pt-5" [hidden]="!(lastClick === 1)" #airtimemob>
+          <div class="col-12 col-lg-10 pull-right">
+            <com-airtime-bundles [mobile]="hide_icons && mobile_screen"></com-airtime-bundles>
+          </div>
+        </div>
+
+        <div class="row  pt-5" [hidden]="!(lastClick === 2)" #smsmob>
+          <div class="col pull-right">
+            <com-sms-bundles [mobile]="hide_icons && mobile_screen" [bundleList]="bundlelist_details"></com-sms-bundles>
+          </div>
+        </div>
+
+        <div class="row  pt-5" [hidden]="!(lastClick === 3)" #specialmob>
+          <div class="col pull-right">
+            <com-special-bundles [mobile]="hide_icons && mobile_screen"></com-special-bundles>
+          </div>
+        </div>
+
+        <div class="row  pt-5" [hidden]="!(lastClick === 4)" #voicemob>
+          <div class="col pull-right">
+            <com-voice-bundles [mobile]="hide_icons && mobile_screen"></com-voice-bundles>
+          </div>
+        </div>
+
+        <div class="row  pt-5" [hidden]="!(lastClick === 5)" #socialmob>
+          <div class="col pull-right">
+            <com-social-bundles [mobile]="hide_icons && mobile_screen"></com-social-bundles>
+          </div>
+        </div>
+
+      </div>
+      <div *ngIf="help_icon === true" class="row justify-content-between">
+          <div class="col-12 col-sm-6 col-lg-2" *ngFor="let bn of bundleHelpArray.results;let idx = index" [hidden]='hide_icons && mobile_screen'>
+            <div class="help-bundle-icon">
+              <com-help-bundle-icon (navigate_name)='helpEmitter($event)' [buttonname]=bn.buttonname [icon]=bn.icon [color]=bn.color [name]=bn.name [desc]=bn.desctext [disabled]=bn.disable [(clicked)]=bn.click></com-help-bundle-icon>
+            </div>
+          </div>
+          <div class="row col pt-4 helpBack" *ngIf="lastClick === -1">
+              <span>
+                <a class="anchorhelp" (click)='helpBackIcon()'routerLink='/recharge'>Show less</a>
+              </span>
+            </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="footerDiv === true" class="footer-div" id='footerscroll'>
+      <com-footer (msisdn_val)='footerEmitter($event)' [bundleSelected]='isBundleSelected'></com-footer>
+  </div>
+</div>

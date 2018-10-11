@@ -1,0 +1,188 @@
+.title-text
+{
+    width: 100%;
+    background-color: #343434;
+    color: #fff;
+    padding: 22px;
+    
+    padding-left: 62px;
+}
+.page-content
+{
+    margin-left: -75px;
+    margin-right: -15px;
+    margin-top: 30px;
+     
+     
+    
+    
+}
+
+.tabs{
+    margin-bottom: 25px;
+}
+
+.card_test{
+    background-color: #fff;
+    text-align: center;
+    padding: 59px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+    
+    cursor: pointer;
+   
+}
+
+.card_test {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card_body{
+    text-align:center;
+    font-weight: 200;
+    padding-top: 15px;
+}
+
+.p-3 {
+    padding: 1rem !important;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.remove-bold{
+
+    
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.25;
+    letter-spacing: -.5px;
+    }
+    .devicetext{
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1.17;
+        letter-spacing: -.8px;
+    }
+    
+    .p-0 {
+        padding: 0!important;
+    }
+    .shadow {
+        -webkit-box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    }
+    .rounded {
+        border-radius: .25rem!important;
+    }
+    .white-background {
+        background-color: #fff;
+    }
+    
+    .col-7 {
+        -ms-flex: 0 0 58.333333%;
+        -webkit-box-flex: 0;
+        flex: 0 0 58.333333%;
+        max-width: 58.333333%;
+    }
+    .emptydiv{
+        width: 100%;
+        height: auto;
+    }
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .page-content
+    {
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 30px;  
+              
+       
+    }
+    
+    .container{
+        overflow: scroll; 
+    }
+
+    .title-text
+{
+
+    
+    padding-left: 22px;
+}
+
+} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .page-content
+    {
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 30px;           
+       
+    }
+
+    .title-text
+{
+
+    
+    padding-left: 22px;
+}
+
+    
+} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .page-content
+    {
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 30px;           
+        
+    }
+
+    .title-text
+    {
+    
+        
+        padding-left: 62px;
+    }
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .page-content
+    {
+        margin-left: -75px;
+        margin-right: -15px;
+        margin-top: 30px;           
+        
+    }
+    .title-text
+{
+
+    
+    padding-left: 62px;
+}
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .page-content
+    {
+        margin-left: -75px;
+        margin-right: -15px;
+        margin-top: 30px;           
+        
+    }
+    .title-text
+{
+
+    
+    padding-left: 62px;
+}
+}

@@ -1,0 +1,23 @@
+<div class='main'>
+        <mat-card class="{{color}}" [ngClass]="[disabled ? 'card-dis' : '',clicked && !disabled ? 'card-click' : '']">
+          <div class="container">
+            <div class="row align-items-center justify-content-center main-row">
+              <div class="col-12 col-lg-6 nopadding">
+                <div class="icon">
+                    <img [src]='icon_path' [ngClass]="[disabled ? 'icon-dis' : '',clicked && !disabled ? 'text-click' : '']" class='icon'/> 
+                </div>
+              </div>
+              <div class="col-12 col-lg-4 nopadding">
+                <span id="name" [ngClass]="[disabled ? 'text-dis' : '',clicked && !disabled ? 'text-click' : '']">{{name}}</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col nopadding">
+                  <span id="soon-text" [ngClass]="[disabled ? 'text-dis' : '']"
+                  [ngStyle]="{'opacity': disabled ? '1' : '0'}">
+                  {{soon_text}}</span>
+              </div>
+            </div>
+          </div>
+        </mat-card>
+</div>

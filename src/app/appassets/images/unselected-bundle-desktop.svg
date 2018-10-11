@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#ffffff" d="M-74-6432h1440V409H-74z"/>
+        <path fill="#D5D5D5" d="M0 0h45a5 5 0 0 1 5 5v45L0 0z"/>
+        <text fill="#FFF" font-family="MTNBrighterSans-Medium, MTN Brighter Sans" font-size="22.06" font-weight="400" letter-spacing="-.598">
+            <tspan x="25.581" y="27.035">+</tspan>
+        </text>
+    </g>
+</svg>

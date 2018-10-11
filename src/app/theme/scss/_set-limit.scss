@@ -1,0 +1,37 @@
+@import './config/config';
+
+.limits-text{
+    font-weight: $font-thin !important;
+    font-size: $card-font-size-small;
+}
+.limits-toggle{
+    color: $input-border-default;
+}
+.status-text{
+    font-weight: bold;
+}
+.incdec-button{
+    background-color: $primary !important;
+    border: 1px solid $input-border-default !important;
+}
+.incdec {
+    border: 1px solid $input-border-default !important;
+    background-color :$disabled-text;
+    font-weight: $font-thin !important;
+    font-size: $card-font-size-small !important;
+    color: black;
+}
+select.form-control:not([size]):not([multiple]) {
+    height: 32px;
+}
+.form-control{
+    font-size: $card-font-size-small !important;
+    border: 1px solid $input-border-default !important;
+    background-color: $input-disabled;
+}
+.indec-disabled{
+    background-color: #DDDDDD !important;
+}
+.limit-disabled{
+    background-color: $primary;
+}

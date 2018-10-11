@@ -1,0 +1,54 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: 100px;
+    grid-row-gap: 10px;
+    cursor: pointer;
+    color: black;
+}
+
+.info-image{
+    border-radius: 4px;
+}
+.info-text{
+    padding-left: 10px;
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    /* IE10+ CSS styles go here */
+    .grid-container{
+        display: flex;
+        -ms-grid-template-columns: 100px;
+        -ms-grid-row-gap: 10px;
+        flex-flow: column wrap;
+        cursor: pointer;
+    }
+    .info-text{
+        width: 100px;
+    }
+  }
+
+  @supports (-ms-ime-align: auto) {
+    /* Edge 12-15 CSS styles go here */
+    .grid-container{
+        display: flex;
+        -ms-grid-template-columns: 100px;
+        -ms-grid-row-gap: 10px;
+        flex-flow: column wrap;
+        cursor: pointer;
+    }
+    .info-text{
+        width: 100px;
+    }
+   }
+   @supports (-ms-accelerator:true) {
+     /* Edge 16+ CSS styles go here */
+     .grid-container{
+        display: flex;
+        -ms-grid-template-columns: 100px;
+        -ms-grid-row-gap: 10px;
+        flex-flow: column wrap;
+        cursor: pointer;
+    }
+    .info-text{
+        width: 100px;
+    }
+   }

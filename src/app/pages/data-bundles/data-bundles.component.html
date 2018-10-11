@@ -1,0 +1,56 @@
+<div class="container-fluid data-main">
+    <div *ngIf="mobile === false" class="row">
+        <span>What kind of bundle are you looking for?</span>
+    </div>
+    <div class="row tool-main justify-content-start">
+        <div class="col-12 col-lg-6 nopadding">
+            <div class="row nopadding">
+                <span class="col-10 col-lg-auto choose-bundle nopadding">Choose a bundle type based on how long you'd like to last.&nbsp;&nbsp;</span>
+                <ng-template #popContent class='tooltipContent'>
+                        <div class="container px-4 py-2">
+                            <div class="row">
+                                <div class="col-10 nopadding">
+                                    <span class='tooltip-heading'>Data Validity:</span>
+                                </div>
+                                <div class="col-2 nopadding">
+                                    <div class="text-right">
+                                        <i class="fa fa-1x fa-times" (click)='pd.close()'></i>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-11 nopadding">
+                                        <span class='tooltip-text'>The shorted the validity period, the cheaper the bundle will be.</span>
+                                    </div>
+                                </div>
+                        </div>
+                    </ng-template>
+                    <div class='col-1 nopadding' placement="bottom-left" popover-class="increase-popover-width"  [ngbPopover]="popContent"  #pd="ngbPopover">
+                        <div class="pull-right">
+                            <img [src]="tooltip_path" alt="ToolTip" class="tool-tip"/>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <span *ngIf="databundleArray.subresults" class="col-12 col-lg-6 pull-right p-sm-0 p-md-0 p-lg-0 p-xs-0">This is what's available:</span>
+    </div>
+    <div class="row pt-4 justify-content-between">
+        <div class="col-12 col-lg-5 nopadding">
+            <div *ngIf="databundleArray.subresults" class="container tab-view">
+                <div class="row px-3">
+                   <div *ngFor="let bn of databundleTab;let idx = index" class="col normal-tab" (click)='changeTab(idx)' [ngClass]="[tab_state[idx] ? 'active-tab' : '']">
+                       <span>{{bn.bundleSubType}}</span>
+                   </div>
+                </div>
+            </div>
+            <span *ngIf="!(databundleArray.subresults)">No bundles available</span>
+        </div>
+        <div *ngIf="databundleArray.subresults" class="col-12 col-lg-6 pull-right p-sm-0 p-md-0 p-lg-0 p-xs-0">
+            <div class="bundle-list">
+                <div *ngFor="let bn of databundleArray.subresults;let idx = index" class='each-card'>
+                    <com-bundle-card (click)="select_bundle(idx)" [color]='bn.color' [size]='bn.value' [unit]='bn.name' [rate]='bn.cost' [y_desc]='bn.subdesc' [special_check]='bn.special' [check]='bn.check' [w_desc]='bn.desc'></com-bundle-card>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

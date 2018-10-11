@@ -1,0 +1,21 @@
+@import './config/config';
+
+.mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
+    background-color: $primary;
+}
+.mat-slide-toggle-thumb {
+    background-color: $input-border-default;
+    height: 15px !important;
+    width: 15px !important;
+    margin-top: 3.4px !important;
+}
+.mat-slide-toggle-bar {
+    width: 30px !important;
+    height: 16px !important;
+    background-color: #DDDDDD !important;
+}
+.mat-slide-toggle-content {
+    font-size: $info-font-size-small;
+    font-family: inherit;
+    font-weight: $font-thin;
+}

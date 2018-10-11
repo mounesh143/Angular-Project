@@ -1,0 +1,44 @@
+<div class="modal-header">
+  <h4 class="modal-title">T’s and C’s </h4>
+  <!-- <button type="button" class="closeSymbolModalButton close" aria-label="Close" (click)="d('Cross click')"> -->
+  <button type="button" class="closeSymbolModalButton close" aria-label="Close" (click)="closeModal('closing')">
+    <span class='closeSymbolModalSpan' aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body" [id]="printableArea">
+  <p class='MTNTandC'>MTN Terms and Conditions</p>
+  <p class='MTNOnlineShoppingTandC'>MTN Online Shop Purchasing Terms and Conditions (“Terms and Conditions”)</p>
+  <p class='Note'>NOTE:</p>
+  <div *ngFor="let item of TnC">
+    <p class='contentNumberHeader'>{{item.id}}</p>
+    <p class='contentNumberText' [innerHTML]='item.value'></p>
+  </div>
+</div>
+<div class="modal-footer">
+  <div class='col-xs-4 col-sm-3 col-md-3 col-lg-3 noPaddingRight paddingMobile'>
+    <com-button type="inactive" label="Print" class='buttonPrint' (click)="PrintPage(printableArea)"></com-button>
+  </div>
+  <div class='col-xs-4 col-sm-5 col-md-3 col-lg-3 noPaddingRight paddingMobile'>
+    <com-button type="inactive" label="Save PDF" class='buttonSavePDF' (click)="savePDF()"></com-button>
+  </div>
+  <div class='col-md-3 col-lg-3  extraDivButton'></div>
+  <div class='col-xs-4 col-sm-3 col-md-3 col-lg-3 noPaddingLeft'>
+    <com-button type="primary" label="Close" class='buttonCloseModal' (click)="closeModal('closing')"></com-button>
+    <!-- <com-button type="primary" label="Close" class='buttonCloseModal' (click)="activeModal.dismiss('Cross click')"></com-button> -->
+  </div>
+</div>
+
+
+<!-- 
+<div class="modal-header">
+  <h4 class="modal-title">Hi there!</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <p>Hello, {{name}}!</p>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+</div> -->

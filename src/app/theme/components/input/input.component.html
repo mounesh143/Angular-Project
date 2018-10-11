@@ -1,0 +1,8 @@
+<div class='input-wrapper' [ngClass]='wrapper_class'>
+  <input [type]="type" (blur)='onBlur()' (focus)='onFocus()'  class="input-box-field"
+  [ngClass]="[ errormsg !== '' ? 'input-wrapper-error' : '']"
+    [(value)]="_value" (keyup)="renderChange($event.target.value)" [placeholder]="placeholder" autocomplete="off">
+</div>
+
+
+

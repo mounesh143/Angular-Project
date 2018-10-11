@@ -1,0 +1,8 @@
+@import './config/config';
+.tab-view-wrapper {
+    border: 1px solid $primary;
+    font-weight: $font-medium;
+}
+.active-tab1, .active-tab2{
+    background-color: $primary;
+} 

@@ -1,0 +1,51 @@
+@import './config/config';
+
+.active-tab{
+    background-color:  $primary;
+}
+.tab-view{
+    font-size: $card-font-size-small;
+    font-weight: 600;
+}
+
+
+.tooltipButton {
+    background-color: #c1c1c1;
+    color: #fff;
+    margin: 0 !important;
+    margin-left: 5px !important;
+    width: 40px;
+    border-radius: 40px;
+}
+
+.popover{
+    width: 2000px !important;
+    font-family: 'MTN Sans';
+    font-weight: 200;
+    font-size: 14px;
+    border: 0;
+    box-shadow: 0 9px 12px 0 rgba(0, 0, 0, 0.08);
+    margin-left: 15px;
+    z-index: 101;
+}
+
+.popover-header {
+    text-align: right;
+}
+
+
+@media screen and (max-width: $resS){
+    .tab-view{
+        font-size: $card-font-size-x-small;
+        box-shadow: 0 9px 12px 0 rgba(0, 0, 0, 0.08);
+        padding: 5px 3px 4px 3px;
+    }
+    .p-xs-0{
+        padding: 0 !important;
+    }
+    .popover{
+        margin-left: 0px;
+        margin-right: 15px;
+    }
+}
+

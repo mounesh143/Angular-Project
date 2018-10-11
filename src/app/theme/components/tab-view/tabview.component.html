@@ -1,0 +1,9 @@
+<div class="tab-view-wrapper" [ngStyle]="{ 'padding-left': tab_state === '0' ? '1px' : '8px'}">
+    <div class="normal-tab" (click)="switchTab('0')" [ngClass]="[tab_state === '0' ? 'active-tab1' : 'inactive-tab1']">
+        <span>{{ tab_names[0] }}</span>    
+    </div>
+    <div class="normal-tab" (click)="switchTab('1')" [ngClass]="[tab_state === '1' ? 'active-tab2' : 'inactive-tab2']">
+        <span>{{ tab_names[1] }}</span>
+    </div>
+ </div>
+ 

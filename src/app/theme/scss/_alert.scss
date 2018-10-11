@@ -1,0 +1,9 @@
+@import './config/config';
+
+i.warning{
+  color: $danger !important;
+}
+
+i.success{
+  color: $success !important;
+}

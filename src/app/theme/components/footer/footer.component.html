@@ -1,0 +1,35 @@
+<footer>
+        <div class="sample footer-main">
+            <div class="container-fluid">
+                <div class="row pt-4 pl-4">
+                    <div class="col">
+                        <span class="recharge-text">Which number do you want to recharge?</span>
+                    </div>
+                </div>
+                <div class="row pb-5 pl-4">
+                    <div class="col-12 col-lg-4 pt-2">
+                        <form [formGroup]='msisdnForm' >
+                                <com-input  label='MSISDN' formControlName='msisdn' type='number' placeholder='Enter MSIDN' id='input-focus' disabled='true'
+                                [error]="((msisdnForm.get('msisdn').hasError('required') || msisdnForm.get('msisdn').hasError('minlength') || msisdnForm.get('msisdn').hasError('maxlength')) && !msisdnForm.get('msisdn').pristine) == false ? '' : 'Please enter a valid MSIDN'" required></com-input>
+                        </form>
+                    </div>
+                    <div class="col-12 col-lg-3">
+                        <com-button label='Buy now' (click)="validateBundle(msisdnForm)" type='primary'
+                        [disabled]="!msisdnForm.valid || !bundleSelected"></com-button>
+                    </div>
+                    <div class="col-12 col-lg-3">
+                        <span class="terms-text">
+                                MTN cannot be held responsible for numbers entered incorrectly. 
+                                &nbsp;Please double check the cell number you’ve chosen before recharging.
+                        </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="gap my-5">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </footer>
